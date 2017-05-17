@@ -1,0 +1,70 @@
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.clr {
+  &:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+   }
+}
+
+.pull-left {
+  float: left!important;
+}
+
+.pull-right {
+  float: right!important;
+}
+
+
+.row {
+  @extend .clr;
+  padding-bottom: 15px;
+}
+
+.col {
+  float: left;
+}
+
+.col + .col {
+  padding-left:25px;
+}
+
+.three-four,
+.three-fourths {
+  width: 75%;
+}
+
+.one-three,
+.third {
+  width: 33.33%;
+}
+
+.two-three {
+  width:66.67%;
+}
+
+.one-four,
+.fourth {
+  width: 25%;
+}
+
+.two-four,
+.half  {
+  width: 50%;
+}
+
+.full-width {
+  width: 100%;
+}

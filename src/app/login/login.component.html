@@ -1,0 +1,18 @@
+<h1 class="page-title">Login</h1>
+<div class="main-content">
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-container">
+      <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email" formControlName="email">
+        <error-msg [control]="loginForm.controls.email"></error-msg>
+      </div>
+      <div class="row">
+        <label>Password</label>
+        <input type="password" name="password" formControlName="password">
+        <error-msg [control]="loginForm.controls.password"></error-msg>
+      </div>
+      <div class="row button-row">
+        <input class="button" type="submit" value="Login">
+      </div>
+  </form>
+</div>

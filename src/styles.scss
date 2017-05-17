@@ -1,0 +1,211 @@
+/* You can add global styles to this file, and also import other style files */
+$base-grey:rgba(238,240,243,1);
+$brand-purple:#873A8C;
+$dark-text:#565656;
+$light-text:#979797;
+$divider-grey:#DDDDDD;
+$active-green:#32BE67;
+$warn-red:#F36A54;
+$text-base:#334152;
+$blue-text:#223E5E;
+$accent-blue:#223E5E;
+$accent-grey: #F7F7F7;
+$diabled-grey:#C9CBD0;
+
+$open-sans: "Open Sans", Arial, Helvetica, sans-serif;
+$carto:"CartoGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+@mixin placeholders {
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+     @content
+  }
+  ::-moz-placeholder {
+     @content
+  }
+  :-ms-input-placeholder {
+     @content
+  }
+  :-moz-placeholder {
+     @content
+  }
+}
+
+.form-error-msg {
+  opacity: 0;
+  color:$warn-red;
+  transition: opacity 60ms ease-in;
+  transition-delay: 70ms;
+  min-height: 28px;
+  font-size: 14px;
+  &.active{
+    opacity: 1;
+  }
+}
+
+.description-count {
+  text-align: right;
+  color:$light-text;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.error-message {
+  color: $warn-red;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+.error-trim .error-message {
+  position: relative;
+  top:-16px;
+}
+
+.form-explainer {
+  color: $light-text;
+  text-align: center;
+  line-height: 20px;
+  padding-bottom: 40px;
+  p{
+    padding-bottom: 30px;
+  }
+  a {
+    color:#508FB8;
+  }
+}
+
+
+
+.form-header {
+  font-weight: 700;
+  color:$brand-purple;
+  font-size: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid $light-text;
+  margin-bottom: 15px;
+}
+
+
+label {
+  font-weight: 300;
+  color: $dark-text;
+  padding-bottom: 5px;
+  font-size: 15px;
+  display: inline-block;
+}
+
+input[type='text'],
+input[type='password'],
+textarea,
+.ui-dropdown,
+select {
+  border: 1px solid  $light-text;
+  background-color: #FFF;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 3px;
+
+  &.ng-invalid.ng-touched {
+    border-color:$warn-red;
+  }
+
+  &:disabled{
+    background: $base-grey;
+    cursor: not-allowed;
+  }
+
+  @include placeholders{
+    font-weight: 300;
+    color:$light-text;
+  };
+}
+
+input[type="radio"] ,
+input[type="checkbox"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+input[type="radio"] + .radio-label,
+input[type="checkbox"] + .checkbox-label{
+  display: block;
+  line-height: 1.3rem;
+  font-size:.95rem;
+  font-weight: normal;
+}
+
+input[type="radio"] + .radio-label:before,
+input[type="checkbox"] + .checkbox-label:before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align:-0.48rem;
+  cursor: pointer;
+  border: 1px solid $light-text;
+}
+
+
+input[type="radio"]:checked + .radio-label:before,
+input[type="checkbox"]:checked  + .checkbox-label:before  {
+  background-color:$light-text;
+}
+
+input[type="radio"]:checked  + .radio-label:after,
+input[type="checkbox"]:checked  + .checkbox-label:after {
+  content: "\ea10";
+  font-size: .9rem;
+  position: absolute;
+  color: #FFF;
+  left: .3rem;
+  top: .31rem;
+}
+
+
+.button-row {
+  padding-top: 15px;
+}
+
+.button {
+  background: $brand-purple;
+  cursor: pointer;
+  color:#FFF;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 3px;
+  outline: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  line-height:1;
+
+  &.inline-btn {
+    display: inline-block;
+    width: auto;
+  }
+
+  &:disabled{
+    background: $light-text;
+    cursor: not-allowed;
+  }
+
+  &.alt-btn{
+    background: $blue-text;
+  }
+}

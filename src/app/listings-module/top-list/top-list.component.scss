@@ -1,0 +1,42 @@
+.listing-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid #CCC;
+  border-top: none;
+}
+
+.page-title {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 0;
+  position: relative;
+}
+
+.listing {
+  border-top: 2px solid #CCC;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.list-img {
+  display: inline-block;
+  float: left;
+  border: 3px solid transparent;
+
+  &.active {
+    border-color: green;
+  }
+}
+
+.list-data {
+  list-style: none;
+  display: inline-block;
+  float: left;
+
+  li {
+    padding: 0 15px 15px 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,11 @@
+<h1 class="page-title">Test</h1>
+<div class="listing-content">
+  <div class="listing clr" *ngFor="let item of listings; let i=index" (click)="alertMe(item)">
+    <img [src]="item.url" class="list-img" [class.active]="item.active">
+    <ul class="list-data">
+      <li>{{item.name}}</li>
+      <li *ngIf="item.active">Active</li>
+      <li *ngIf="!item.active">{{item.active | empty:'Not Active'}}</li>
+    </ul>
+  </div>
+</div>

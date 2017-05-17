@@ -1,0 +1,88 @@
+
+.form-error-msg {
+  opacity: 0;
+  color:$warn-red;
+  transition: opacity 60ms ease-in;
+  transition-delay: 70ms;
+  min-height: 28px;
+  font-size: 14px;
+  &.active{
+    opacity: 1;
+  }
+}
+
+.error-message {
+  color: $warn-red;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+label {
+  font-weight: 300;
+  color: $dark-text;
+  padding-bottom: 5px;
+  font-size: 15px;
+  display: inline-block;
+}
+
+input[type='text'],
+input[type='password'],
+textarea,
+select {
+  border: 1px solid  $light-text;
+  background-color: #FFF;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 3px;
+
+  &.ng-invalid.ng-touched {
+    border-color:$warn-red;
+  }
+
+  &:disabled{
+    background: $base-grey;
+    cursor: not-allowed;
+  }
+
+  @include placeholders{
+    font-weight: 300;
+    color:$light-text;
+  };
+}
+
+.button {
+  background: $brand-purple;
+  cursor: pointer;
+  color:#FFF;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 3px;
+  outline: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  line-height:1;
+
+  &.inline-btn {
+    display: inline-block;
+    width: auto;
+  }
+
+  &:disabled{
+    background: $light-text;
+    cursor: not-allowed;
+  }
+
+  &.alt-btn{
+    background: $blue-text;
+  }
+}

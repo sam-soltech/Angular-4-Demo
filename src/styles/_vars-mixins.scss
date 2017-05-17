@@ -1,0 +1,28 @@
+$base-grey:rgba(238,240,243,1);
+$brand-purple:#873A8C;
+$dark-text:#565656;
+$light-text:#979797;
+$divider-grey:#DDDDDD;
+$active-green:#32BE67;
+$warn-red:#F36A54;
+$text-base:#334152;
+$blue-text:#223E5E;
+$accent-blue:#223E5E;
+$accent-grey: #F7F7F7;
+$diabled-grey:#C9CBD0;
+
+
+@mixin placeholders {
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+     @content
+  }
+  ::-moz-placeholder {
+     @content
+  }
+  :-ms-input-placeholder {
+     @content
+  }
+  :-moz-placeholder {
+     @content
+  }
+}
