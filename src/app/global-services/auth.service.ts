@@ -6,7 +6,7 @@ import {IUser, User} from '../interfaces-classes/IUser';
 
 @Injectable()
 export class AuthService extends BaseService {
-  public loggedIn:boolean = true;
+  public loggedIn:boolean = false;
   public redirectUrl: string = '';
   constructor(
     private http: Http
